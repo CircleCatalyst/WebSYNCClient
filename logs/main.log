@@ -1,0 +1,100 @@
+2008-04-07 17:00:37,360 nz.dataview.websyncclient.Client   INFO [          ] - Logger initialised OK
+2008-04-07 17:00:37,376 nz.dataview.websyncclient.Client   INFO [          ] - Not using proxy server, reset all proxy settings OK
+2008-04-07 17:00:37,876 nz.dataview.websyncclient.Client   INFO [          ] - Logger initialised OK
+2008-04-07 17:00:37,876 nz.dataview.websyncclient.Client   INFO [          ] - Initialised config and logger OK
+2008-04-07 17:00:37,876 nz.dataview.websyncclient.Client   INFO [          ] - Reset report and overall status OK
+2008-04-07 17:00:43,191 nz.dataview.websyncclient.Client   INFO [          ] - Retrieved last run time: Mon Apr 07 15:46:32 NZST 2008
+2008-04-07 17:00:43,206 nz.dataview.websyncclient.Client   INFO [          ] - *****Starting run*****
+2008-04-07 17:00:43,206 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - uploadDir: C:\Program Files\WebSYNCClient\upload_dir
+2008-04-07 17:00:43,206 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - Directory (C:\Program Files\WebSYNCClient\upload_dir) is readable, about to loop through files
+2008-04-07 17:00:43,222 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - files to upload: 1maxNumUploads: 5
+2008-04-07 17:00:43,222 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - Got filename: random.pdf, now checking ignore lists
+2008-04-07 17:00:43,237 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - File is not on the ignore lists, and is an ordinary file, proceed to upload checks
+2008-04-07 17:00:43,237 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - File random.pdf is readable
+2008-04-07 17:00:43,237 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - File C:\Program Files\WebSYNCClient\upload_dir\random.pdf is readable
+2008-04-07 17:00:43,237 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - Got download byte limit: 2000
+2008-04-07 17:00:43,284 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - Read 2000 bytes from byte no: 0, numBytesRead: 2000
+2008-04-07 17:00:43,300 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - Split into chunks of String of length 76 successfully
+2008-04-07 17:00:43,300 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - Data block prepared for upload
+2008-04-07 17:00:43,300 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - About to upload block 1 (attempt: 1 of 5)
+2008-04-07 17:00:44,363 nz.dataview.websyncclient.Downloader   INFO [Downloader] - Completed download run (Overview of download run:
+Successful downloads: 0, failed downloads: 0)
+2008-04-07 17:00:45,582 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - Returned from invocation with: 44336
+2008-04-07 17:00:45,582 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - Data block uploaded successfully, after 1 attempts
+2008-04-07 17:00:45,582 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - Read 2000 bytes from byte no: 2000, numBytesRead: 2000
+2008-04-07 17:00:45,582 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - Split into chunks of String of length 76 successfully
+2008-04-07 17:00:45,582 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - Data block prepared for upload
+2008-04-07 17:00:45,598 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - About to upload block 2 (attempt: 1 of 5)
+2008-04-07 17:00:46,489 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - Returned from invocation with: 44336
+2008-04-07 17:00:46,489 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - Data block uploaded successfully, after 1 attempts
+2008-04-07 17:00:46,489 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - Read 2000 bytes from byte no: 4000, numBytesRead: 2000
+2008-04-07 17:00:46,489 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - Split into chunks of String of length 76 successfully
+2008-04-07 17:00:46,489 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - Data block prepared for upload
+2008-04-07 17:00:46,489 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - About to upload block 3 (attempt: 1 of 5)
+2008-04-07 17:00:47,270 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - Returned from invocation with: 44336
+2008-04-07 17:00:47,270 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - Data block uploaded successfully, after 1 attempts
+2008-04-07 17:00:47,270 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - Read 2000 bytes from byte no: 6000, numBytesRead: 2000
+2008-04-07 17:00:47,270 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - Split into chunks of String of length 76 successfully
+2008-04-07 17:00:47,270 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - Data block prepared for upload
+2008-04-07 17:00:47,270 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - About to upload block 4 (attempt: 1 of 5)
+2008-04-07 17:00:48,036 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - Returned from invocation with: 44336
+2008-04-07 17:00:48,052 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - Data block uploaded successfully, after 1 attempts
+2008-04-07 17:00:48,052 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - Read 2000 bytes from byte no: 8000, numBytesRead: 2000
+2008-04-07 17:00:48,052 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - Split into chunks of String of length 76 successfully
+2008-04-07 17:00:48,052 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - Data block prepared for upload
+2008-04-07 17:00:48,052 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - About to upload block 5 (attempt: 1 of 5)
+2008-04-07 17:00:49,052 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - Returned from invocation with: 44336
+2008-04-07 17:00:49,052 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - Data block uploaded successfully, after 1 attempts
+2008-04-07 17:00:49,052 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - Read 2000 bytes from byte no: 10000, numBytesRead: 2000
+2008-04-07 17:00:49,052 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - Split into chunks of String of length 76 successfully
+2008-04-07 17:00:49,052 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - Data block prepared for upload
+2008-04-07 17:00:49,052 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - About to upload block 6 (attempt: 1 of 5)
+2008-04-07 17:00:49,865 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - Returned from invocation with: 44336
+2008-04-07 17:00:49,865 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - Data block uploaded successfully, after 1 attempts
+2008-04-07 17:00:49,865 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - Read 2000 bytes from byte no: 12000, numBytesRead: 2000
+2008-04-07 17:00:49,881 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - Split into chunks of String of length 76 successfully
+2008-04-07 17:00:49,881 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - Data block prepared for upload
+2008-04-07 17:00:49,881 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - About to upload block 7 (attempt: 1 of 5)
+2008-04-07 17:00:50,647 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - Returned from invocation with: 44336
+2008-04-07 17:00:50,647 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - Data block uploaded successfully, after 1 attempts
+2008-04-07 17:00:50,647 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - Read 2000 bytes from byte no: 14000, numBytesRead: 1310
+2008-04-07 17:00:50,647 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - End of the byte stream detected, copy data array to trimmed array
+2008-04-07 17:00:50,647 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - Split into chunks of String of length 76 successfully
+2008-04-07 17:00:50,647 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - Data block prepared for upload
+2008-04-07 17:00:50,647 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - About to upload block 8 (attempt: 1 of 5)
+2008-04-07 17:00:51,256 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - Returned from invocation with: 44336
+2008-04-07 17:00:51,256 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - Data block uploaded successfully, after 1 attempts
+2008-04-07 17:00:51,256 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - About to call final upload to close off sequence (attempt: 1 of 5)
+2008-04-07 17:00:51,835 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - Returned from upload invocation with: 44336
+2008-04-07 17:00:51,835 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - Sequence closed off successfully
+2008-04-07 17:00:51,835 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - File random.pdf uploaded successfully
+2008-04-07 17:00:51,850 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - Entered Uploader.isFileValid() with int: 44336, byte[]: 15310
+2008-04-07 17:00:51,850 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - Got local hash: 8c806b902585f473dbaa86a30fea18e9
+2008-04-07 17:00:52,257 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - Got remote hash: 8c806b902585f473dbaa86a30fea18e9
+2008-04-07 17:00:52,257 nz.dataview.websyncclient.Uploader   INFO [Uploader  ] - Uploaded file integrity checked successfully
+2008-04-07 17:00:52,257 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - Returned from doUpload invocation with: true
+2008-04-07 17:00:52,257 nz.dataview.websyncclient.Uploader   INFO [Uploader  ] - File random.pdf was uploaded to the server
+2008-04-07 17:00:52,257 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - Attempted to delete file random.pdf
+2008-04-07 17:00:52,272 nz.dataview.websyncclient.Uploader   INFO [Uploader  ] - Uploaded file random.pdf was deleted from disk
+2008-04-07 17:00:52,413 nz.dataview.websyncclient.Uploader   INFO [Uploader  ] - File upload of random.pdf completed successfully
+2008-04-07 17:00:52,413 nz.dataview.websyncclient.Uploader  DEBUG [Uploader  ] - Incrementing successfulUploads: 1
+2008-04-07 17:00:52,413 nz.dataview.websyncclient.Uploader   INFO [Uploader  ] - Completed upload run (Overview of upload run:
+Successful uploads: 1, failed uploads: 0, warnings: 0)
+2008-04-07 17:00:52,413 nz.dataview.websyncclient.Client   INFO [          ] - Scheduled transfer completed
+2008-04-07 17:00:52,413 nz.dataview.websyncclient.Client   INFO [          ] - *****Time taken for this run: 9.207 second(s)*****
+2008-04-07 17:00:53,304 nz.dataview.websyncclient.Client   INFO [          ] - Going to sleep for -3251 seconds...
+2008-04-07 17:00:53,304 nz.dataview.websyncclient.Client   INFO [          ] - Do not sleep (slept long enough), continue with next run
+2008-04-07 17:00:53,335 nz.dataview.websyncclient.Client   INFO [          ] - Logger initialised OK
+2008-04-07 17:00:53,335 nz.dataview.websyncclient.Client   INFO [          ] - Initialised config and logger OK
+2008-04-07 17:00:53,335 nz.dataview.websyncclient.Client   INFO [          ] - Reset report and overall status OK
+2008-04-07 17:00:53,757 nz.dataview.websyncclient.Client   INFO [          ] - Retrieved last run time: Mon Apr 07 17:00:42 NZST 2008
+2008-04-07 17:00:53,757 nz.dataview.websyncclient.Client   INFO [          ] - Not running this time round
+2008-04-07 17:00:53,789 nz.dataview.websyncclient.Client   INFO [          ] - Going to sleep for 600 seconds...
+2008-05-19 12:31:55,546   INFO [          ] - Logger initialised OK
+2008-05-19 12:31:55,593   INFO [          ] - Not using proxy server, reset all proxy settings OK
+2008-05-19 12:31:56,406   INFO [          ] - Logger initialised OK
+2008-05-19 12:31:56,406   INFO [          ] - Initialised config and logger OK
+2008-05-19 12:31:56,406   INFO [          ] - Reset report and overall status OK
+2008-05-19 12:31:58,924   INFO [          ] - Retrieved last run time: Mon May 19 11:55:20 NZST 2008
+2008-05-19 12:31:58,939   INFO [          ] - *****Starting run*****
+2008-05-19 12:31:59,706   INFO [Downloader] - Completed download run (Overview of download run: successful downloads: 0, failed downloads: 0)

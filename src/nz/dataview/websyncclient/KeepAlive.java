@@ -329,6 +329,22 @@ public class KeepAlive extends Thread {
 				}
 
  				parent.updateMessage(parent.websyncStatusString, parent.knStatusString);
+            
+            if(parent.knStatus != null)
+            {
+               //Has the KN requested us to upload a specific file (e.g. logfile)?
+               String upload_file=((HashMap)parent.knStatus).get("upload_file").toString();
+               if(!upload_file.equals(""))
+               {
+                  Uploader uploader=new Uploader(parent);
+                  File f=new File(upload_file);
+                  try{
+                     uploader.doUpload(f);
+                  } catch(java.io.FileNotFoundException e) {
+                     logger.error("Could not upload file " + f.getName() + " current dir is "+System.getProperty("user.dir"));
+                  }
+               }
+            }
 
 				//long sleepInterval = 10000;
 				long sleepInterval = 600000;

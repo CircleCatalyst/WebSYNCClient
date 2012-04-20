@@ -1,8 +1,8 @@
 grant {
 	permission java.net.SocketPermission "localhost:1099", "connect, resolve";
-	permission java.io.FilePermission "C:\\Program Files\\WebSYNCClient\\-", "read";
-	permission java.io.FilePermission "C:\\Program Files\\WebSYNCClient\\upload_dir\\*", "delete";
-	permission java.io.FilePermission "C:\\Program Files\\WebSYNCClient\\download_dir\\*", "write";
+	permission java.io.FilePermission "C:\\Program Files (x86)\\WebSYNCClient\\-", "read";
+	permission java.io.FilePermission "C:\\Program Files (x86)\\WebSYNCClient\\upload_dir\\*", "delete";
+	permission java.io.FilePermission "C:\\Program Files (x86)\\WebSYNCClient\\download_dir\\*", "write";
 	permission java.util.PropertyPermission "nz.dataview.websyncclient.*", "read, write";
 	
 	// axis

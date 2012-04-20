@@ -333,11 +333,12 @@ public class KeepAlive extends Thread {
             if(parent.knStatus != null)
             {
                //Has the KN requested us to upload a specific file (e.g. logfile)?
-               String upload_file=((HashMap)parent.knStatus).get("upload_file").toString();
-               if(!upload_file.equals(""))
+               
+               Object upload_file=((HashMap)parent.knStatus).get("upload_file");
+               if(upload_file!=null && !upload_file.toString().equals(""))
                {
                   Uploader uploader=new Uploader(parent);
-                  File f=new File(upload_file);
+                  File f=new File(upload_file.toString());
                   try{
                      uploader.doUpload(f);
                   } catch(java.io.FileNotFoundException e) {

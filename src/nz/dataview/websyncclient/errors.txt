@@ -48,6 +48,7 @@ Batch errors
 0321: IO error encountered while reading file: [file] to upload (uploaded so far: n bytes), giving up.
 0322: Could not find batch xml file [name]
 0323: Could not read batch xml file [name]
+0324: File is not readable
 
 High level errors
 0400: Unable to email. Are your SMTP settings correct?

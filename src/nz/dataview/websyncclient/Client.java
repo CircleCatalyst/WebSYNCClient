@@ -41,14 +41,14 @@ import org.tanukisoftware.wrapper.WrapperManager;
  * etc.
  * 
  * @author  William Song, Tim Owens
- * @version 2.1.0
+ * @version 2.1.1
  */
 public class Client {
 
    /**
     * The WebSYNC version.
     */
-   public static final String WEBSYNC_VERSION = "2.1.0";
+   public static final String WEBSYNC_VERSION = "2.1.1";
    /**
     * The logger!
     */

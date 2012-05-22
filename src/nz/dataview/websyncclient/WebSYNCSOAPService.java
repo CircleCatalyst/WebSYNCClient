@@ -345,6 +345,7 @@ public class WebSYNCSOAPService implements WebSYNCService {
 				{
 					logger.debug("0108: Failed to read response from uncompressFile message:\n"+body.toString());
 				}
+            ret = -1;
          }
 
       } catch (Exception e) {
@@ -849,7 +850,7 @@ public class WebSYNCSOAPService implements WebSYNCService {
 
          org.apache.axis.soap.SOAPConnectionFactoryImpl cf=new org.apache.axis.soap.SOAPConnectionFactoryImpl();
          SOAPConnectionImpl conn = (SOAPConnectionImpl) cf.createConnection();
-         conn.setTimeout(new Integer(15000)); //15 seconds
+         conn.setTimeout(new Integer(60000)); //60 seconds
          long startTime = System.currentTimeMillis();
          SOAPMessage response = conn.call(smsg, endpoint);
          long endTime = System.currentTimeMillis();

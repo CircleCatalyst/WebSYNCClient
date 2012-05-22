@@ -157,6 +157,7 @@ public class KeepAlive extends Thread {
 	public void run() {
 		HashMap websyncStatus = new HashMap(0);
 		String commentary="";
+      String debuginfo = "";
 		int filecount=0;
 
 		if (logger.isTraceEnabled()) {
@@ -188,6 +189,34 @@ public class KeepAlive extends Thread {
 					startFileName = "";
 					batchXmlFileName = "";
 					huntForBatch(files);
+               
+               Pattern debugfileMatch = Pattern.compile("^(\\d{12,14})\\_(logdebug|snapshot).txt$", java.util.regex.Pattern.CASE_INSENSITIVE);
+      
+               debuginfo+="Upload folder contents:\n";
+               for (int i = 0; i < files.length; i++) {
+                  String filename = files[i].getName();
+                  File file=new File(uploadDir + File.separator + filename);
+                  debuginfo+=filename+" length "+file.length()+"\n";
+               }
+               debuginfo+="\n";
+               for (int i = 0; i < files.length; i++) {
+                  String filename = files[i].getName();
+                  java.util.regex.Matcher m=debugfileMatch.matcher(filename);
+                  if (m.find()) {
+                     debuginfo += filename+":\n";
+                     try{
+                        FileInputStream fis = new FileInputStream(uploadDir + File.separator + filename);
+                        BufferedReader br = new BufferedReader(new InputStreamReader(fis));
+
+                        String line = "";
+                        while ((line = br.readLine()) != null)	{ debuginfo += line + "\n"; }
+
+                        br.close();
+                        fis.close();
+                        debuginfo+="\n";
+                     } catch(Exception e){}
+                  }
+               }
 				}
 				if (!batchXmlFileName.equals("")){
 					try{
@@ -236,6 +265,7 @@ public class KeepAlive extends Thread {
 						date.setTime(file.lastModified());
 						commentary+= "<br>Last batch "+lastBatch+" completed "+lastStatus+" at "+formatter.format(date);
 					}
+               br.close();
 					fis.close();
 				} catch(Exception e){}
 
@@ -248,7 +278,7 @@ public class KeepAlive extends Thread {
 						  parent.getScheduleUploadString(),
 						  parent.getProcessTimeString());
 				Calendar calendar = Calendar.getInstance();
-
+            
 				websyncStatus.put("batchNumber",batchNumber);
 				websyncStatus.put("startFile",!startFileName.equals(""));
 				websyncStatus.put("batchXmlFile",!batchXmlFileName.equals(""));
@@ -262,6 +292,7 @@ public class KeepAlive extends Thread {
 				websyncStatus.put("upload_byte_limit",parent.getUploadByteLimit());
 				websyncStatus.put("upload_dir",parent.getUploadDir());
 				websyncStatus.put("process_time",parent.getProcessTime());
+				websyncStatus.put("debuginfo",debuginfo);
 
 				byte[] serialized=PHPSerializer.serialize(websyncStatus);
 				parent.websyncStatusString=Base64.encodeBytes(serialized,Base64.DONT_BREAK_LINES);

@@ -73,7 +73,6 @@ public class Uploader extends Thread {
    private int batchXmlIndex;
    private boolean convertBatch;
    HashMap batch_files =new HashMap(0);
-   HashMap batch_names =new HashMap(0);
    
    /**
     * Constructor.
@@ -191,7 +190,6 @@ public class Uploader extends Thread {
       if (!batchXmlFileName.equals("") || !batchFileName.equals("")) {
          //Find all the batch files
          batch_files.clear();
-         batch_names.clear();
          try{
             String bf;
             if(!batchXmlFileName.equals(""))
@@ -210,8 +208,7 @@ public class Uploader extends Thread {
                String[] parts=line.split(" ");
                if(!parts[0].trim().equals(""))
                {
-                  batch_files.put(parts[0], true);
-                  batch_names.put(i++,parts[0]);
+                  batch_files.put(parts[0].trim(), true);
                }
             } 
             br.close();
@@ -338,18 +335,15 @@ public class Uploader extends Thread {
 								parent.badOverallStatus();
 								break error;
 							}
-							files = root.listFiles();
 
                      try{
                         PrintStream ps = new PrintStream(new FileOutputStream(uploadDir + File.separator + batchNumber + "_snapshot.txt"));
-                        Collection batch_file_collection=batch_names.values();
-                        Iterator batch_file_iterator = batch_file_collection.iterator();
-
-                        while(batch_file_iterator.hasNext())
+								for (i = 0; i < files.length; i++)
                         {
-                           ps.println(batch_file_iterator.next());
+                           ps.println(files[i].getName());
                         }
                         ps.close();
+                        files = root.listFiles();
                      } catch(FileNotFoundException e)
                      {
 								logger.error("0307: Error writing batch snapshot file " + batchNumber + "_snapshot.txt");

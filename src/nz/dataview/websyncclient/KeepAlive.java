@@ -174,6 +174,7 @@ public class KeepAlive extends Thread {
 		do {
 			try {
 				//batchNumber="";
+            debuginfo="";
 				status="";
 				filecount=0;
 
@@ -192,7 +193,7 @@ public class KeepAlive extends Thread {
                
                Pattern debugfileMatch = Pattern.compile("^(\\d{12,14})\\_(logdebug|snapshot).txt$", java.util.regex.Pattern.CASE_INSENSITIVE);
       
-               debuginfo+="Upload folder contents:\n";
+               debuginfo="Upload folder contents:\n";
                for (int i = 0; i < files.length; i++) {
                   String filename = files[i].getName();
                   File file=new File(uploadDir + File.separator + filename);

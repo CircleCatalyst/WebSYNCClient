@@ -1031,7 +1031,7 @@ public class WebSYNCSOAPService implements WebSYNCService {
       if (iv == null) {
          // maybe its a SOAP fault
          SOAPBody body = (SOAPBody) response.getSOAPBody();
-         HashMap faultText = getSOAPFault(body);
+         HashMap<String,String> faultText = getSOAPFault(body);
 
          String message = "";
          String details = "";
@@ -1140,7 +1140,7 @@ public class WebSYNCSOAPService implements WebSYNCService {
     * @param   body  the SOAP body to search
     * @return	     the fault text, or null if no faults are found
     */
-   private HashMap getSOAPFault(SOAPBody body) {
+   private HashMap<String,String> getSOAPFault(SOAPBody body) {
       if (logger.isTraceEnabled()) {
          logger.trace("Entered WebSYNCSOAPService.isSOAPFault() with SOAPBody: " + body);
       }
@@ -1191,7 +1191,7 @@ public class WebSYNCSOAPService implements WebSYNCService {
       }
 		if(fault!=null)
 		{
-			ret=new HashMap(0);
+			ret=new HashMap<String,String>(0);
 			ret.put("fault",fault);
 			ret.put("details",details);
 		}

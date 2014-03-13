@@ -35,7 +35,7 @@ import org.apache.log4j.NDC;
  * defined in the New Zealand SMS-LMS interoperability specification 2
  * 
  * @author  William Song, Tim Owens
- * @version 2.1.1
+ * @version 2.1.2
  */
 public class Uploader extends Thread {
 
@@ -72,7 +72,7 @@ public class Uploader extends Thread {
    private int batchIndex;
    private int batchXmlIndex;
    private boolean convertBatch;
-   HashMap batch_files =new HashMap(0);
+   HashMap<String,Boolean> batch_files =new HashMap<String,Boolean>(0);
    
    /**
     * Constructor.
@@ -240,6 +240,7 @@ public class Uploader extends Thread {
    public void run() {
       int i;
 		String knstat;
+      boolean moreFilesFound=false;
 
       NDC.push("Uploader");
 
@@ -376,8 +377,20 @@ public class Uploader extends Thread {
 										}catch(IOException e){}
 									}
 								}
+                                //Just in case any have arrived afterwards
+                                moreFilesFound=false;
+                                files = root.listFiles();
+                                huntForBatch(files);
+								for (i = 0; i < files.length; i++) {
+                                    Object file_in_batch=batch_files.get(files[i].getName());
+									if (file_in_batch!=null && file_in_batch.equals(true)) {
+                                        moreFilesFound=true;
+                                        break;
+                                    }
+                                }
+                                logdebug("1c" + (moreFilesFound?"1":"0"));
 								//If all the files uploaded fine, send the batch file.
-								if(parent.getOverallStatus())
+								if(parent.getOverallStatus() && !moreFilesFound)
 								{
 									 //Lastly, upload the XML file.
 									 uploadFile(files[batchXmlIndex]);
@@ -419,6 +432,7 @@ public class Uploader extends Thread {
 					overview += "successful uploads: " + successfulUploads;
 					overview += ", failed uploads: " + failedUploads;
 					overview += ", warnings: " + warnings;
+					overview += ", more files found: " + moreFilesFound;
 					logger.info("Completed upload run (" + overview + ")");
 					parent.appendReport(overview);
 				}
